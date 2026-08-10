@@ -1,56 +1,545 @@
-<!doctype html>
+<<!DOCTYPE html>
 <html lang="km">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Smiling TopUp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>💎 SMILING TOPUP</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#07101c;color:#fff}
-header{background:linear-gradient(135deg,#10243d,#1d4770);padding:22px 16px;text-align:center;position:sticky;top:0;z-index:5}
-.logo{font-size:30px;font-weight:800}.tag{color:#c7d6e6;margin:5px 0 14px}
-nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;padding:7px 12px;border:1px solid #54799d;border-radius:20px;font-size:13px}
-main{max-width:650px;margin:auto;padding:18px}.card{background:#111c29;border:1px solid #293b4f;border-radius:20px;padding:18px;margin-bottom:16px}
-h2{margin:0 0 15px}.games{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.game,.package{border:1px solid #34485d;background:#0b1521;border-radius:15px;padding:14px 6px;text-align:center;cursor:pointer}
-.game.active,.package.active{border-color:#4da3ff;background:#173653}.icon{font-size:32px}.game b{display:block;margin-top:7px;font-size:13px}
-label{display:block;margin:14px 0 7px;color:#c3d0dc}input,select{width:100%;padding:14px;border-radius:11px;border:1px solid #3a5066;background:#08111b;color:#fff;font-size:16px}
-.packages{display:grid;grid-template-columns:1fr 1fr;gap:10px}.package strong{display:block;font-size:17px}.package span{color:#b6c4d2;font-size:13px}
-button{width:100%;border:0;border-radius:12px;padding:15px;background:#318cff;color:#fff;font-weight:700;font-size:17px;margin-top:18px}
-.muted{color:#8ea0b3;font-size:13px;line-height:1.6}.order{margin-top:15px;background:#09131e;border-radius:12px;padding:14px;line-height:1.9}
-.badge{color:#63e6a4}.contact{text-align:center}footer{text-align:center;color:#7f91a4;padding:25px 15px;font-size:12px}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#07111d;
+  color:white;
+}
+
+header{
+  background:linear-gradient(135deg,#12365d,#1d4d7d);
+  text-align:center;
+  padding:35px 15px 25px;
+}
+
+.logo{
+  font-size:38px;
+  font-weight:800;
+}
+
+.tagline{
+  font-size:20px;
+  color:#cbd9e8;
+  margin:10px 0 22px;
+}
+
+nav{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  border:1px solid #6d9bc7;
+  padding:10px 22px;
+  border-radius:30px;
+}
+
+nav a:hover{
+  background:#3185d7;
+}
+
+main{
+  max-width:680px;
+  margin:auto;
+  padding:20px 15px 50px;
+}
+
+.card{
+  background:#101d29;
+  border:1px solid #30465c;
+  border-radius:25px;
+  padding:25px;
+  margin-bottom:20px;
+}
+
+h2{
+  margin-top:0;
+}
+
+.games{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.game{
+  background:#09131f;
+  border:1px solid #34485d;
+  border-radius:18px;
+  padding:20px 8px;
+  text-align:center;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.game:hover,
+.game.active{
+  border-color:#4fa5ff;
+  background:#173958;
+}
+
+.game .icon{
+  font-size:45px;
+}
+
+.game b{
+  display:block;
+  margin-top:10px;
+}
+
+label{
+  display:block;
+  margin:18px 0 7px;
+  color:#c9d5e2;
+  font-size:17px;
+}
+
+input,
+select{
+  width:100%;
+  padding:15px;
+  border-radius:15px;
+  border:1px solid #40566d;
+  background:#07111d;
+  color:white;
+  font-size:16px;
+  outline:none;
+}
+
+input:focus,
+select:focus{
+  border-color:#4fa5ff;
+}
+
+.packages{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.package{
+  background:#09131f;
+  border:1px solid #34485d;
+  border-radius:18px;
+  padding:18px 8px;
+  text-align:center;
+  cursor:pointer;
+}
+
+.package:hover,
+.package.active{
+  border-color:#4fa5ff;
+  background:#173958;
+}
+
+.package strong{
+  display:block;
+  font-size:21px;
+}
+
+.price{
+  margin-top:7px;
+  color:#c5d1df;
+}
+
+button{
+  width:100%;
+  padding:16px;
+  border:0;
+  border-radius:15px;
+  background:#3185e8;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:18px;
+}
+
+button:hover{
+  background:#4a9bf2;
+}
+
+.summary{
+  background:#07111d;
+  border:1px solid #34485d;
+  border-radius:18px;
+  padding:18px;
+  margin-top:20px;
+}
+
+.summary p{
+  margin:9px 0;
+}
+
+.total{
+  font-size:23px;
+  font-weight:bold;
+  color:#62b0ff;
+}
+
+.contact{
+  text-align:center;
+}
+
+.muted{
+  color:#9fb0c2;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#8294a8;
+}
+
+@media(max-width:520px){
+  .logo{
+    font-size:30px;
+  }
+
+  .games{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+
+  .game{
+    padding:15px 4px;
+  }
+
+  .game .icon{
+    font-size:35px;
+  }
+
+  .packages{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .card{
+    padding:18px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header id="home">
-<div class="logo">💎 SMILING TOPUP</div><div class="tag">Fast • Easy • Trusted</div>
-<nav><a href="#home">Home</a><a href="#order">Order</a><a href="#contact">Contact</a></nav>
+
+  <div class="logo">💎 SMILING TOPUP</div>
+
+  <div class="tagline">
+    Fast • Easy • Trusted
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
 </header>
+
 <main>
-<section class="card"><h2>🎮 ជ្រើសរើស Game</h2>
-<div class="games">
-<div class="game active" data-game="PUBG Mobile" data-icon="🎯"><div class="icon">🎯</div><b>PUBG Mobile</b></div>
-<div class="game" data-game="Mobile Legends" data-icon="⚔️"><div class="icon">⚔️</div><b>Mobile Legends</b></div>
-<div class="game" data-game="Free Fire" data-icon="🔥"><div class="icon">🔥</div><b>Free Fire</b></div>
-</div></section>
-<section class="card" id="order"><h2 id="gameTitle">🎯 PUBG Mobile</h2>
-<label>Player ID / User ID</label><input id="playerId" inputmode="numeric" placeholder="បញ្ចូល Player ID">
-<label>Server ID / Region <span class="muted">(បើ Game ត្រូវការ)</span></label><input id="serverId" placeholder="ឧ. Server ID">
-<label>ជ្រើសរើស Package</label><div class="packages" id="packages"></div>
-<label>វិធីបង់ប្រាក់</label><select id="payment"><option>KHQR / Bakong (Demo)</option><option>Wing (Demo)</option><option>Pi Pay (Demo)</option></select>
-<button id="orderButton">🛒 បង្កើត Order</button>
-<p class="muted">⚠️ Demo Only — មិនទទួលប្រាក់ពិត និងមិនបញ្ជូន UC/Diamonds ពិតទេ។</p>
-<div id="result" style="display:none"><div class="order">
-<div>Order ID: <b id="orderId"></b></div><div>Game: <b id="orderGame"></b></div><div>Player ID: <b id="orderPlayer"></b></div><div>Package: <b id="orderPackage"></b></div><div>Total: <b id="orderPrice"></b></div><div>Status: <span class="badge">Pending (Demo)</span></div>
-</div></div></section>
-<section class="card contact" id="contact"><h2>📞 Contact Smiling TopUp</h2><p class="muted">សម្រាប់សំណួរ ឬជំនួយ Order សូមទាក់ទងតាម Facebook Page របស់ Smiling TopUp។</p></section>
+
+<section class="card">
+
+  <h2>🎮 ជ្រើស Game</h2>
+
+  <div class="games">
+
+    <div class="game active" onclick="selectGame('PUBG Mobile',this)">
+      <div class="icon">🎯</div>
+      <b>PUBG Mobile</b>
+    </div>
+
+    <div class="game" onclick="selectGame('Mobile Legends',this)">
+      <div class="icon">⚔️</div>
+      <b>Mobile Legends</b>
+    </div>
+
+    <div class="game" onclick="selectGame('Free Fire',this)">
+      <div class="icon">🔥</div>
+      <b>Free Fire</b>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="card" id="order">
+
+  <h2 id="gameTitle">🎯 PUBG Mobile</h2>
+
+  <label>Player ID / User ID</label>
+
+  <input
+    id="playerId"
+    type="text"
+    placeholder="បញ្ចូល Player ID"
+  >
+
+  <label>Server ID / Region</label>
+
+  <input
+    id="serverId"
+    type="text"
+    placeholder="បញ្ចូល Server ID"
+  >
+
+
+  <label>ជ្រើសរើស Package</label>
+
+  <div class="packages">
+
+    <div class="package active"
+         onclick="selectPackage('60 UC','$1.10',this)">
+      <strong>60 UC</strong>
+      <div class="price">$1.10</div>
+    </div>
+
+    <div class="package"
+         onclick="selectPackage('325 UC','$5.40',this)">
+      <strong>325 UC</strong>
+      <div class="price">$5.40</div>
+    </div>
+
+    <div class="package"
+         onclick="selectPackage('660 UC','$10.80',this)">
+      <strong>660 UC</strong>
+      <div class="price">$10.80</div>
+    </div>
+
+    <div class="package"
+         onclick="selectPackage('1800 UC','$27.00',this)">
+      <strong>1800 UC</strong>
+      <div class="price">$27.00</div>
+    </div>
+
+  </div>
+
+
+  <label>វិធីបង់ប្រាក់</label>
+
+  <select id="payment">
+    <option value="KHQR / Bakong">KHQR / Bakong</option>
+    <option value="ABA">ABA</option>
+    <option value="Other">Other</option>
+  </select>
+
+
+  <div class="summary">
+
+    <h3>🧾 Order Summary</h3>
+
+    <p>
+      Game:
+      <strong id="summaryGame">PUBG Mobile</strong>
+    </p>
+
+    <p>
+      Package:
+      <strong id="summaryPackage">60 UC</strong>
+    </p>
+
+    <p>
+      Price:
+      <strong id="summaryPrice">$1.10</strong>
+    </p>
+
+    <p class="total">
+      Total:
+      <span id="total">$1.10</span>
+    </p>
+
+  </div>
+
+
+  <button onclick="createOrder()">
+    🛒 បង្កើត Order
+  </button>
+
+
+  <button
+    onclick="copyOrder()"
+    style="background:#26394d;">
+    📋 Copy Order
+  </button>
+
+</section>
+
+
+<section class="card contact" id="contact">
+
+  <h2>📞 Contact</h2>
+
+  <p class="muted">
+    មានបញ្ហាជាមួយ Order?
+  </p>
+
+  <p>
+    សូមទាក់ទង Admin ដើម្បីជួយពិនិត្យ Order។
+  </p>
+
+  <p>
+    💬 Telegram: <b>@YOUR_TELEGRAM</b>
+  </p>
+
+  <p>
+    📱 Phone: <b>YOUR PHONE</b>
+  </p>
+
+</section>
+
 </main>
-<footer>Smiling TopUp © 2026<br>Fast • Easy • Trusted</footer>
+
+
+<footer>
+  © 2026 SMILING TOPUP
+</footer>
+
+
 <script>
-const catalog={"PUBG Mobile":[["60 UC","1.10"],["325 UC","5.40"],["660 UC","10.80"],["1800 UC","27.00"]],"Mobile Legends":[["86 Diamonds","1.20"],["172 Diamonds","2.40"],["257 Diamonds","3.50"],["514 Diamonds","6.80"]],"Free Fire":[["100 Diamonds","1.20"],["310 Diamonds","3.60"],["520 Diamonds","5.90"],["1060 Diamonds","11.50"]]};
-let currentGame="PUBG Mobile",selectedPackage=null;
-function showPackages(){const box=document.getElementById("packages");box.innerHTML="";selectedPackage=null;catalog[currentGame].forEach(item=>{const d=document.createElement("div");d.className="package";d.innerHTML="<strong>"+item[0]+"</strong><span>$"+item[1]+"</span>";d.onclick=()=>{document.querySelectorAll(".package").forEach(x=>x.classList.remove("active"));d.classList.add("active");selectedPackage=item};box.appendChild(d)})}
-document.querySelectorAll(".game").forEach(g=>g.onclick=()=>{document.querySelectorAll(".game").forEach(x=>x.classList.remove("active"));g.classList.add("active");currentGame=g.dataset.game;document.getElementById("gameTitle").textContent=g.dataset.icon+" "+currentGame;document.getElementById("result").style.display="none";showPackages()});
-document.getElementById("orderButton").onclick=()=>{const p=document.getElementById("playerId").value.trim();if(!p)return alert("សូមបញ្ចូល Player ID");if(!selectedPackage)return alert("សូមជ្រើសរើស Package");const id="ST-"+Date.now().toString().slice(-8);document.getElementById("orderId").textContent=id;document.getElementById("orderGame").textContent=currentGame;document.getElementById("orderPlayer").textContent=p;document.getElementById("orderPackage").textContent=selectedPackage[0];document.getElementById("orderPrice").textContent="$"+selectedPackage[1];document.getElementById("result").style.display="block"};showPackages();
+
+let selectedGame = "PUBG Mobile";
+let selectedPackage = "60 UC";
+let selectedPrice = "$1.10";
+
+
+function selectGame(game,element){
+
+  selectedGame = game;
+
+  document
+    .querySelectorAll(".game")
+    .forEach(x => x.classList.remove("active"));
+
+  element.classList.add("active");
+
+  document.getElementById("gameTitle").innerText =
+    "🎮 " + game;
+
+  document.getElementById("summaryGame").innerText =
+    game;
+
+}
+
+
+function selectPackage(pkg,price,element){
+
+  selectedPackage = pkg;
+  selectedPrice = price;
+
+  document
+    .querySelectorAll(".package")
+    .forEach(x => x.classList.remove("active"));
+
+  element.classList.add("active");
+
+  document.getElementById("summaryPackage").innerText =
+    pkg;
+
+  document.getElementById("summaryPrice").innerText =
+    price;
+
+  document.getElementById("total").innerText =
+    price;
+}
+
+
+function createOrder(){
+
+  const playerId =
+    document.getElementById("playerId").value.trim();
+
+  const serverId =
+    document.getElementById("serverId").value.trim();
+
+  const payment =
+    document.getElementById("payment").value;
+
+  if(!playerId){
+
+    alert("សូមបញ្ចូល Player ID ជាមុនសិន ❤️");
+
+    return;
+  }
+
+  if(!serverId){
+
+    alert("សូមបញ្ចូល Server ID ជាមុនសិន ❤️");
+
+    return;
+  }
+
+  const order =
+`SMILING TOPUP
+
+Game: ${selectedGame}
+Player ID: ${playerId}
+Server ID: ${serverId}
+Package: ${selectedPackage}
+Price: ${selectedPrice}
+Payment: ${payment}`;
+
+  alert(order);
+
+}
+
+
+function copyOrder(){
+
+  const playerId =
+    document.getElementById("playerId").value.trim();
+
+  const serverId =
+    document.getElementById("serverId").value.trim();
+
+  const payment =
+    document.getElementById("payment").value;
+
+  const order =
+`SMILING TOPUP
+Game: ${selectedGame}
+Player ID: ${playerId}
+Server ID: ${serverId}
+Package: ${selectedPackage}
+Price: ${selectedPrice}
+Payment: ${payment}`;
+
+  navigator.clipboard.writeText(order)
+    .then(() => {
+
+      alert("✅ Order បាន Copy រួចរាល់!");
+
+    })
+    .catch(() => {
+
+      alert(order);
+
+    });
+
+}
+
 </script>
+
 </body>
 </html>
